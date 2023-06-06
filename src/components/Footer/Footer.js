@@ -12,7 +12,7 @@ const handleChange = (event, newValue) => {
 return (
     <div style={{backgroundColor: '#0097A7', }}>
     <BottomNavigation sx={{
-        width: 500,
+        width: '20vh',
         margin: '50px auto 0px auto',
         background: '#E0F2F1',
         borderRadius: '15px',
