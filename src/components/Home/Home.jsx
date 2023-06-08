@@ -88,7 +88,7 @@ return (
                 <StarBorderIcon style={{ 
                     color: '#0097A7', 
                     position: 'relative', 
-                    top: '-70px', 
+                    top: '-270px', 
                     left: '10px', 
                     fontSize: '50px' 
                 }} />

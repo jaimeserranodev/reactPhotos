@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import FavoriteList from './components/favoriteList/favoriteList';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,12 +20,13 @@ function App() {
           <SearchAppBar />
           <CustomSection />
           <BasicSelect />
-          <div>
-            <Routes>
-              <Route path="/home" element={<Home />} />
-              <Route path="/favoriteList" element={<FavoriteList />} />
-            </Routes>
-          </div>
+            <div>
+              <Routes>
+                  <Route path="/reactPhotos" element={<Home/>} />
+                  <Route path="Home" element={<Home />} />
+                  <Route path="/favoriteList" element={<FavoriteList />} />
+              </Routes>
+            </div>
           <LabelBottomNavigation />
         </div>
       </Provider>
