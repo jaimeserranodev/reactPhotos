@@ -96,7 +96,7 @@ return (
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        React Photos
+                        React Gallery
                     </Typography>
                     <nav style={{display: 'flex'}}>
                         <Link to='/home' 

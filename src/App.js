@@ -18,7 +18,7 @@ function App() {
       <Provider store={store}>
         <div className="App">
           <SearchAppBar />
-          <CustomSection />
+          
           <BasicSelect />
             <div>
               <Routes>

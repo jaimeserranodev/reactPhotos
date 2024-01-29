@@ -76,7 +76,7 @@ return (
     justifyContent: 'space-around',
     
     }}>
-        {photos.map((index, i) => {
+        {photos.map((_index, i) => {
         return (
             <ImageListItem key={photos[i].id} style={{ 
                 height: '300px', 
