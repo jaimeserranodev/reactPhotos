@@ -1,6 +1,5 @@
 import SearchAppBar from './components/Header/Header';
 import LabelBottomNavigation from './components/Footer/Footer';
-import CustomSection from './components/Section/Section';
 import BasicSelect from './components/SortBy/SortBy';
 import Home from './components/Home/Home';
 import "@fontsource/roboto"; // Defaults to weight 400
