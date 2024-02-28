@@ -13,7 +13,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/reactPhotos">
       <Provider store={store}>
         <div className="App">
           <SearchAppBar />
