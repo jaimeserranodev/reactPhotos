@@ -59,14 +59,20 @@ let favoriteSlice = createSlice({
             }
         },
         searchFAvorite: (state, action) => {
-            const searchTerm = typeof action.payload === 'string' ? action.payload : action.payload.toString();
-            if (searchTerm === '') {
-              state.list = JSON.parse(localStorage.getItem('myFavorites'));
-            } else {
-              state.list = JSON.parse(localStorage.getItem('myFavorites'));
-              state.list = state.list.filter(item => item.description.toLowerCase().includes(searchTerm.toLowerCase()));
-            }
+          // Convertir el payload a string independientemente del tipo de dato que sea
+          const searchTerm = action.payload.toString().toLowerCase();
+      
+          // Cargar la lista de favoritos desde localStorage o utilizar una lista vacía como valor predeterminado
+          const storedList = JSON.parse(localStorage.getItem('myFavorites')) || [];
+      
+          if (searchTerm.trim() === '') {
+              // Si el término de búsqueda está vacío, restaurar la lista completa de favoritos
+              state.list = storedList;
+          } else {
+              // Filtrar la lista de favoritos basándose en el término de búsqueda
+              state.list = storedList.filter(item => item.description && item.description.toLowerCase().includes(searchTerm));
           }
+      }
         }
     })
 
