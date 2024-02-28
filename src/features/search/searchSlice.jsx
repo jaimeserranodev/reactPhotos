@@ -10,6 +10,7 @@ let initialState = {
 export const searchPhoto = createAsyncThunk('search/searchPhoto', async (arg, { rejectWithValue }) => {
     const baseUrl = 'https://api.unsplash.com/';
     const count = 30;
+
     try {
         let url;
         if (!arg.search || arg.search === '') {
@@ -32,7 +33,7 @@ export const searchSlice = createSlice({
     reducers: {
         // Considerando la implementación original, esta sección se mantiene igual.
         sortSearch: (state, action) => {
-            // La implementación original se mantiene ya que es específica del caso de uso.
+            
         }
     },
     extraReducers: (builder) => {
