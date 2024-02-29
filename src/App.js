@@ -21,7 +21,7 @@ function App() {
           <BasicSelect />
             <div>
               <Routes>
-                  <Route path="/reactPhotos" element={<Home/>} />
+                  <Route path="/" element={<Home/>} />
                   <Route path="Home" element={<Home />} />
                   <Route path="/favoriteList" element={<FavoriteList />} />
               </Routes>
