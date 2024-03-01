@@ -5,10 +5,9 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { sortSearch } from '../../features/search/searchSlice';
+import { sortSearch } from '../../features/search/searchSlice'; // Asumiendo que ambos actions están correctamente exportados
 import { sortBy } from '../../features/favorite/favoriteSlice';
 import './SortBy.css';
-
 
 export default function BasicSelect() {
     const dispatch = useDispatch();
@@ -23,18 +22,15 @@ export default function BasicSelect() {
 
     return (
         <div className='sortBy'>
-            <Box sx={{ minWidth: 120, maxWidth: 300, alignItems: 'center' }}>
+            <Box sx={{ minWidth: 120, maxWidth: 300, display: 'flex', justifyContent: 'center' }}>
                 <FormControl fullWidth>
-                    <InputLabel id='demo-simple-select-label'>Sort By</InputLabel>
+                    <InputLabel id="demo-simple-select-label">Sort By</InputLabel>
                     <Select
-                        labelId='demo-simple-select-label'
-                        id='demo-simple-select'
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
                         value={selectedValue}
-                        label={selectedValue ? undefined : 'Sort By'}
-                        
-                        onChange={(target) => {
-                            onSort(target);
-                        }}
+                        label="Sort By"
+                        onChange={onSort}
                     >
                         <MenuItem value='none'>None</MenuItem>
                         <MenuItem value='width'>Width</MenuItem>

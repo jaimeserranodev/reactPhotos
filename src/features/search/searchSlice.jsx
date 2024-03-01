@@ -33,8 +33,29 @@ export const searchSlice = createSlice({
     reducers: {
         // Considerando la implementación original, esta sección se mantiene igual.
         sortSearch: (state, action) => {
-            
-        }
+            // Implementación basada en tu lógica de ordenamiento.
+            const sortBy = action.payload;
+            switch (sortBy) {
+                // Tu implementación de ordenamiento basada en el slice de favoritos.
+                case 'height':
+                    state.list.sort((a, b) => b.height - a.height);
+                    break;
+                case 'width':
+                    state.list.sort((a, b) => b.width - a.width);
+                    break;
+                case 'likes':
+                    state.list.sort((a, b) => b.likes - a.likes);
+                    break;
+                case 'dateAdd':
+                    // Asegúrate de que tus objetos tengan una propiedad `date` adecuada para este ordenamiento.
+                    state.list.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    break;
+                // Considera manejar el caso 'none' si es necesario.
+                default:
+                    // Posible manejo del caso default.
+                    break;
+            }
+        },
     },
     extraReducers: (builder) => {
         builder
