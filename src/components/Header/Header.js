@@ -83,7 +83,7 @@ const SearchAppBar = () => {
                             React Gallery
                         </Typography>
                         <nav style={{ display: 'flex' }}>
-                            <Link to='/home' style={{ color: 'white', textDecorationLine: 'none', fontSize: '16px', fontWeight: '700' }}>Home</Link>
+                            <Link to='/' style={{ color: 'white', textDecorationLine: 'none', fontSize: '16px', fontWeight: '700' }}>Home</Link>
                             <Link to='/favoriteList' style={{ color: 'white', textDecorationLine: 'none', margin: '0 30px', fontSize: '16px', fontWeight: '700' }}>Gallery</Link>
                         </nav>
                         <Search>
